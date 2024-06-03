@@ -48,7 +48,7 @@ target_link_libraries(ccf_person_identification
   ${FLANN_LIBRARIES}
   dlib::dlib
 )
-add_dependencies(ccf_person_identification ccf_person_identification_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(ccf_person_identification ${ccf_person_identification_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 add_executable(ccf_person_identification_test src/ccf_person_identification_test.cpp)
 add_dependencies(ccf_person_identification_test ${ccf_person_identification_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
